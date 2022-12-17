@@ -16,6 +16,7 @@ public class Movie {
         this.country = country;
         this.producer = producer;
     }
+
     public void bio() {
         System.out.println("==========================****************==============================");
         System.out.printf("Название: %s\n", movieName);
@@ -25,30 +26,33 @@ public class Movie {
         System.out.printf("Режиссер: %s\n", producer);
         System.out.println("==========================****************==============================");
     }
-    public static void viewAllMovies(ArrayList<Movie> moviesList)
-    {
-        for(var movies : moviesList){
-           movies.bio();
+
+    public static void viewAllMovies(ArrayList<Movie> moviesList) {
+        for (var movies : moviesList) {
+            movies.bio();
         }
     }
-    public static void searchByName(ArrayList<Movie> moviesList, String searchValue){
-        for(var movies : moviesList) {
-            if(movies.movieName.equalsIgnoreCase(searchValue) || movies.movieName.toLowerCase().contains(searchValue)){
+
+    public static void searchByName(ArrayList<Movie> moviesList, String searchValue) {
+        for (var movies : moviesList) {
+            if (movies.movieName.equalsIgnoreCase(searchValue) || movies.movieName.toLowerCase().contains(searchValue)) {
                 movies.bio();
             }
         }
     }
+
     public static void searchByCountry(ArrayList<Movie> moviesList, String searchValue) {
-        for(var movies : moviesList) {
-            if(movies.country.equalsIgnoreCase(searchValue) || movies.country.toLowerCase().contains(searchValue)){
+        for (var movies : moviesList) {
+            if (movies.country.equalsIgnoreCase(searchValue) || movies.country.toLowerCase().contains(searchValue)) {
                 movies.bio();
             }
         }
 
     }
-    public static void searchByGenre(ArrayList<Movie> moviesList, String searchValue){
-        for(var movies : moviesList){
-            if(movies.genre.equalsIgnoreCase(searchValue) || movies.genre.toLowerCase().contains(searchValue)){
+
+    public static void searchByGenre(ArrayList<Movie> moviesList, String searchValue) {
+        for (var movies : moviesList) {
+            if (movies.genre.equalsIgnoreCase(searchValue) || movies.genre.toLowerCase().contains(searchValue)) {
                 movies.bio();
             }
         }
